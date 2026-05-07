@@ -1,4 +1,4 @@
-### In this activity, you will learn how to track changes to code projects on your Raspberry Pi using Git, a popular version control system used by professional developers.
+### :octocat: In this activity, you will learn how to track changes to code projects on your Raspberry Pi using Git, a popular version control system used by professional developers.
 
 ## 0. What is Git? [Source](https://projects.raspberrypi.org/en/projects/getting-started-with-git/2)
 
@@ -98,7 +98,7 @@ This should bring up something like this:
 
 You don’t really need to worry about this directory at all now. Just know that it is there and that it is tracking all the changes to the parent directory `sensor-logger`
 
-### Review:
+### :book: Review:
 - `mkdir` creates a directory.
 - `cd` moves into it.
 - `ls` lists all non-hidded content in a directory.
@@ -148,7 +148,7 @@ This commits all changes you have made in the directory to the Git repo, and add
 
 Now run `git status` again and compare the results to above.
 
-### Review:
+### :book: Review:
 - `git add` moves a file into the repo and prepares it to be **committed** to the repo.
 - `git commit` makes the change to the repo from the list of files to be added (or deleted).
 - `git status` check the repo to see where we are on the project.
@@ -210,31 +210,13 @@ The file will be restored and you can now commit this change.
 git commit -am 'restore distance function'
 ```
 
+### :book: Review:
+- `git log` let's us see all of the commits we have made to our repo.
+- `git checkout` allows us to roll back those changes
+- We always need to `commit` those reverted changes after we are done.
+
 ## 7. Connect to a remote (e.g., GitHub)
 
 It can be veru useful to be able to save your repos on a cloud remote like GitHub.  This allows you to work with others and on multiple devices.
 
-1. Create a new repo on GitHub via the browser
-   
-3. Then on the Pi:
-
-```bash
-git remote add origin https://github.com/your-username/your-repo.git
-git branch -M main
-git push -u origin main
-```
-
-Describe that:
-- `git remote add origin` links the local repo to the GitHub one.
-- `git push` uploads commits. [sites.google](https://sites.google.com/site/cartwrightraspberrypiprojects/home/ramblings/tutorials/using-github)
-
-## 8. Practice section
-
-At the end of your markdown tutorial, add a short practice checklist, for example:
-- Add a new file, stage it, and commit it.
-- Make a small change, inspect `git status` and `git diff`, then commit.
-- Run `git log` and interpret the history.
-
-***
-
-To move forward usefully: what’s the next thing you’d like help with—turning this outline into a teacher-facing markdown scaffold with headings and placeholders, or writing a student-ready version you can drop straight into a repo?
+**(This is intentionally left blank - we will cover this in the future)**
