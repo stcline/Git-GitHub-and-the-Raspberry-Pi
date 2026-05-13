@@ -219,4 +219,75 @@ git commit -am 'restore distance function'
 
 It can be veru useful to be able to save your repos on a cloud remote like GitHub.  This allows you to work with others and on multiple devices.
 
-**(This is intentionally left blank - we will cover this in the future)**
+- First, login to your GitHub account and click on the icon for your profile in the upper right.  Click "Settings":
+
+<img width="116" height="40" alt="chrome_1d6StIjTaH" src="https://github.com/user-attachments/assets/07ebfd84-a8be-4157-be38-b27739bf2691" />
+
+- On the right side, scroll down to and click, "Developer Settings":
+
+<img width="202" height="36" alt="chrome_P0UZeXIQwk" src="https://github.com/user-attachments/assets/d6e0b3e5-724d-4c75-b5ee-22224b5df7d7" />
+
+- Under "Personal access tokens", select "Tokens (classic)":
+
+<img width="375" height="59" alt="chrome_UxzfF8LHHo" src="https://github.com/user-attachments/assets/19bfbf12-a43c-4640-873b-ae888b3dd806" />
+
+- Choose the "Generate new token" pulldown and select, "Generate new token (classic)":
+
+<img width="398" height="203" alt="chrome_ygUfGgXfzS" src="https://github.com/user-attachments/assets/06f858cb-3849-46f3-bab4-2fb4c4530236" />
+
+- Log in again or use a passkey, if required.
+
+ - In the "Note" section, type `Digital Electronics Pi`
+ - Leave the expiration at 30 days.
+ - Only select the "repo" box in the first section below.  Leave the rest unchecked.
+
+<img width="992" height="797" alt="chrome_ZzlksUxSPF" src="https://github.com/user-attachments/assets/260b589a-6d86-411f-9396-fb4f51f37725" />
+
+- Click "Generate Token" at the bottom.
+- Your new token will show up in the next screen, **DO NOT NAVIGATE AWAY OR YOU WILL HAVE TO DO THIS AGAIN**.  For the next step, open an new browser window with GitHub open.
+
+Next we need to have a GitHub repository on our account.  Create a new repository with the following parts:
+
+- NAME: Digital_Electronics_Raspberry_Pi_Projects
+- DESCRIPTION: A place to store projects for my DE Raspberry Pi
+- VISIBILITY: Public
+- Add README: On
+
+Open your Raspberry Pi Command Line Interface (CLI) using PuTTY.
+
+To get everything set up, we need to store our GitHub credentials on the Pi.  This will prevent the need to enter credentials every time.  Type this into the CLI:
+
+```bash
+git config --global credential.helper store
+```
+
+Navigate to your `Documents` directory.
+
+Type in the following command but replace the REPO_ID with the ID you get from the "Code" pulldown on your repo:
+
+```bash
+git clone [REPO_ID]
+```
+<img width="548" height="525" alt="chrome_or7VRtRupO" src="https://github.com/user-attachments/assets/72f20b4c-ff23-4962-98d7-c020a84fd880" />
+
+You should see something like this:
+
+<img width="1373" height="264" alt="putty_vXVolNfi1N" src="https://github.com/user-attachments/assets/84fb00eb-29cb-4386-b953-b5573fd1cd46" />
+
+- Check to make sure your new repo appears in the directory.
+- Make some changes to it (any changes, just show that you know how to make directories and files in the CLI).
+
+Once you are done, **add** and **commit** like you did before.
+To push the changes to your cloned repo, type the following:
+
+```bash
+git push
+```
+
+- Enter your **GitHub** username.
+- Copy the personal access token you made before and paste it in next. (Remeber, you will not see it)
+- If everything worked, you will get something like this:
+
+<img width="1328" height="290" alt="chrome_dJMpLGBspW" src="https://github.com/user-attachments/assets/852fc597-d842-465c-88d0-7a01be60bd78" />
+
+Check your repo on GitHub to see the changes.
